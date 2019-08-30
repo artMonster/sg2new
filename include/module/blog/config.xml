@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+
+<config>
+	<param name="activationUrl" value="*"/>
+	<param name="baseUrl" value="/blog/"/>
+	<param name="itemsPerPage" value="10"/>
+	<param name="pageUrlParam" value="p"/>
+	<param name="searchUrlParam" value="s"/>
+	<param name="categoryUrlParam" value="category"/>
+	<param name="authorUrlParam" value="author"/>
+	<param name="previewItemsCount" value="10"/>
+	<param name="relatedItemsCount" value="6"/>
+	<param name="newestItemsCount" value="14"/>
+	<param name="adminMenu" value="1"/>
+	<param name="adminMenuOrder" value="28"/>
+
+	<param name="accessAPIList" value="everyone"/>
+	<param name="accessAPICategory" value="everyone"/>
+	<param name="accessAPIDetails" value="everyone"/>
+	<param name="accessAPIAdd" value="admin"/>
+	<param name="accessAPIEdit" value="admin"/>
+
+	<constant name="TABLE_BLOG_ARTICLES" value="articles"/>
+	<constant name="TABLE_BLOG_ARTICLE_CATEGORIES" value="article_categories"/>
+	
+	<filter url="*" action="BlogLoadPreview"/>
+	<filter url="/blog/" action="BlogLoadArticles"/>
+	<filter url="/blog/*" action="BlogLoadArticleDetails" setpage="/blog/"/>
+	
+	<api name="blog" action="api_request_blog"/>
+	
+	<table name="articles" index="url" title="title" useseo="1">
+		<field name="id" type="id" readonly="1"/>
+		<field name="published" type="published"/>
+		<field name="deleted" type="deleted"/>
+		<field name="author" type="author"/>
+		<field name="updated" type="updated"/>
+		<field name="lang" type="lang" listskip="1"/>
+		<field name="sticked" type="bool"/>
+		<field name="url" type="url"/>
+		<field name="link" type="url"/>
+		<field name="date" type="date"/>
+		<field name="email" type="str" listskip="1"/>
+		<field name="title" type="str"/>
+		<field name="description" type="doc" listskip="1"/>
+		<field name="text" type="doc" listskip="1"/>
+		<field name="pic" type="pic" max-width="1600" max-height="1200" listskip="1"/>
+		<field name="pic_preview" type="pic" max-width="800" max-height="600"/>
+		<field name="album_id" type="int" select-from="table:gallery_album" listskip="1"/>
+		<field name="views" type="int" listskip="1"/>
+		<field name="shares" type="int" listskip="1"/>
+		<field name="comments" type="int" listskip="1"/>
+	</table>
+	<table name="article_categories" index="url,article_id" title="title">
+		<field name="id" type="id" readonly="1"/>
+		<field name="published" type="published"/>
+		<field name="deleted" type="deleted"/>
+		<field name="author" type="author"/>
+		<field name="updated" type="updated"/>
+		<field name="lang" type="lang"/>
+		<field name="article_id" type="int" select-from="table:articles"/>
+		<field name="title" type="str"/>
+		<field name="url" type="url"/>
+	</table>
+</config>
+
+</document>

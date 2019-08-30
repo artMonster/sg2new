@@ -1,0 +1,29 @@
+# *** ./.htaccess
+# DENY ALL PHP FILES EXCEPT index.php
+#
+<FilesMatch "\.php$">
+        Order Deny,Allow
+        Deny from all
+</FilesMatch>
+<FilesMatch "^(index\.php)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+RedirectMatch 403 ^/include/(.*)$
+RedirectMatch 403 ^/templates/(.*)$
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+	# enable this lines in multilanguage mode
+	#RewriteRule ^ru(.*)$ $1?lang=ru&%{QUERY_STRING} [L]
+    #RewriteRule ^ua(.*)$ $1?lang=ua&%{QUERY_STRING} [L]
+
+
+	RewriteBase /
+	RewriteRule ^index\.php$ - [L]
+	RewriteCond %{REQUEST_URI} !^/pagespeed_global_admin
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule . /index.php?%{QUERY_STRING} [L]
+</IfModule>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+
+<install>
+	<param name="name" value="blog"/>
+	<param name="version" value="1.4.0"/>
+	<param name="date" value="04.06.2018"/>
+	<param name="title" value="Blog"/>
+	<param name="description" value="Simple Blog or News feature for a website. Supports categories, search filters"/>
+	<param name="tags" value="blog,news,articles"/>
+	<param name="author" value="max@msvhost.com"/>
+	<param name="preview" value="images/blog/module_preview.jpg"/>
+
+	<param name="installHook" value="Install_Blog"/>
+	
+	<dependency module="msv-core" version="1.4"/>
+	<dependency module="gallery" version="1.0"/>
+	
+	<file dir="module" path="blog/blog.php"/>
+	<file dir="module" path="blog/blog.api.php"/>
+	<file dir="module" path="blog/blog.install.php"/>
+	<file dir="module" path="blog/config.xml"/>
+	<file dir="module" path="blog/config.locales.xml"/>
+	<file dir="module" path="blog/config.install.xml"/>
+	<file dir="module" path="blog/doc/en-blog-folder-structure.html"/>
+	<file dir="module" path="blog/doc/en-blog-gallery.html"/>
+	<file dir="module" path="blog/doc/en-blog-layers.html"/>
+	<file dir="module" path="blog/doc/en-email-admin-notify.html"/>
+	<file dir="content" path="images/blog/blog_2.jpg"/>
+	<file dir="content" path="images/blog/blog_3.jpg"/>
+	<file dir="content" path="images/blog/module_preview.jpg"/>
+	<file dir="template" path="default/main-blog.tpl"/>
+	<file dir="template" path="default/blog/article-list.tpl"/>
+	<file dir="template" path="default/blog/article-preview.tpl"/>
+	<file dir="template" path="default/blog/article-preview-list.tpl"/>
+	<file dir="template" path="default/blog/article-preview-short.tpl"/>
+	<file dir="template" path="default/blog/list.tpl"/>
+	<file dir="template" path="default/blog/details.tpl"/>
+	<file dir="template" path="default/blog/main.tpl"/>
+	<file dir="template" path="default/widget/sideblock-blog.tpl"/>
+</install>
+		
+</document>

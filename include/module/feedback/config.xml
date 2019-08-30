@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+<config>
+	<param name="activationLevel" value="5"/>
+	<param name="baseUrl" value="/contacts/"/>
+	<param name="activationUrl" value="*"/>
+	<param name="stickedItemsCount" value="5"/>
+	<param name="adminMenu" value="1"/>
+	<param name="adminMenuOrder" value="25"/>
+
+	<param name="accessAPIList" value="everyone"/>
+	<param name="accessAPIAdd" value="everyone"/>
+	<param name="accessAPIEdit" value="admin"/>
+
+	<constant name="TABLE_FEEDBACK" value="feedback"/>
+
+	<filter action="loadFeedback" url="*"/>
+
+	<api name="feedback" action="api_request_feedback"/>
+
+	<table name="feedback" index="id" title="name">
+		<field name="id" type="id" readonly="1"/>
+		<field name="published" type="published"/>
+		<field name="deleted" type="deleted"/>
+		<field name="author" type="author"/>
+		<field name="updated" type="updated"/>
+		<field name="lang" type="lang" listskip="1"/>
+		<field name="sticked" type="bool"/>
+		<field name="date" type="date"/>
+		<field name="email" type="str" listskip="1"/>
+		<field name="name" type="str"/>
+		<field name="name_title" type="str" listskip="1"/>
+		<field name="text" type="doc"/>
+		<field name="pic" type="pic" max-width="1200" max-height="900" listskip="1"/>
+		<field name="stars" type="int" listskip="1"/>
+		<field name="ip" type="str" listskip="1"/>
+	</table>
+</config>
+</document>

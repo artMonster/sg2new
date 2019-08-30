@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+<install>
+	<param name="name" value="feedback"/>
+	<param name="version" value="1.1.2"/>
+	<param name="date" value="01.05.2018"/>
+	<param name="installHook" value="Install_Feedback"/>
+	<param name="title" value="Feedback and contacts"/>
+	<param name="description" value="Contact form, user feedback and testimonials for website"/>
+	<param name="tags" value="feedback,testimonials,contact form"/>
+	<param name="author" value="max@msvhost.com"/>
+	<param name="preview" value="images/feedback/module_preview.jpg"/>
+
+	<dependency module="msv-core" version="1.0" />
+	<dependency module="msv-api" version="1.0" />
+
+	<file dir="module" path="feedback/feedback.php"/>
+	<file dir="module" path="feedback/feedback.api.php"/>
+	<file dir="module" path="feedback/feedback.install.php"/>
+	<file dir="module" path="feedback/feedback.functions.php"/>
+	<file dir="module" path="feedback/config.xml"/>
+	<file dir="module" path="feedback/config.locales.xml"/>
+	<file dir="module" path="feedback/config.install.xml"/>
+	<file dir="module" path="feedback/doc/en-feedback-1.html"/>
+	<file dir="module" path="feedback/doc/en-feedback-2.html"/>
+	<file dir="module" path="feedback/doc/en-feedback-3.html"/>
+	<file dir="module" path="feedback/doc/en-email-notify.html"/>
+	<file dir="module" path="feedback/doc/en-email-admin-notify.html"/>
+	<file dir="module" path="feedback/doc/ru-feedback-1.html"/>
+	<file dir="module" path="feedback/doc/ru-feedback-2.html"/>
+	<file dir="module" path="feedback/doc/ru-feedback-3.html"/>
+	<file dir="template" path="default/main-feedback.tpl"/>
+	<file dir="template" path="default/feedback/main.tpl"/>
+	<file dir="template" path="default/widget/feedback-sticked.tpl"/>
+	<file dir="content" path="images/contacts.png"/>
+	<file dir="content" path="images/feedback/feedback_1.jpg"/>
+	<file dir="content" path="images/feedback/feedback_2.jpg"/>
+	<file dir="content" path="images/feedback/feedback_3.jpg"/>
+	<file dir="content" path="images/feedback/module_preview.jpg"/>
+</install>
+</document>

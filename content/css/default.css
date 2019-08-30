@@ -1,0 +1,104 @@
+.admin_pic {
+	display: inline-block;
+	background:url(/content/images/sitograph/admin_panel.png);
+	width:12px;
+	height:18px;
+	margin-left:10px;
+}
+.admin_panel {
+	position:absolute;
+	top: 0;
+	z-index:100;
+	background-color:#e6e6e6;
+	top:0px;
+	height:20px!important;
+	border-bottom:1px solid #ccc; 
+}
+.admin_panel tr td {
+    vertical-align: top;
+    font-family: Verdana!important;
+    padding-top: 3px;
+    font-size: 13px;
+	line-height:18px;
+}
+.admin_panel tr td:first-child {
+    padding-left: 10px;
+}
+.admin_panel p {
+    font-size: 13px;
+    color: #666666;
+    font-family: Verdana!important;
+    margin: 0px 0px 5px;
+}
+.admin_panel a:hover {
+    text-decoration:none;
+
+}
+.admin_mode_link:hover {
+    color: #ffffff;
+}
+.admin_title {
+    font-size:13px;
+    font-family: Verdana!important; 
+    margin-left:5px;
+    text-decoration:none;
+    color: #ee1a3b;
+    width: 200px;
+    white-space: nowrap;
+    display: inline;
+    padding:0px 3px; 
+}
+.admin_title:hover {
+    background-color:#f01735;
+    color: #ffffff;    
+}
+
+.highlight {
+	font-weight:bold;
+	background-color: #f6f88c;
+}
+.form-text-inline .alert {
+	font-size: 12px;
+	padding: 8px 10px;
+	margin-left: 20px;
+}
+
+.editor-inline {
+	border: 1px dashed black;
+}
+.editor-inline-block {
+	box-shadow: 0px 0px 20px #f01735;
+	border: 1px dashed #f01735;
+}
+.admin_block {
+	position:relative;
+	z-index: 999;
+	background-color: #f6f88c;
+	background: rgba(246, 248, 140, 0.6);
+	padding: 5px 10px;
+	min-width: 600px;
+}
+#debugLog {
+	width:640px;
+	padding:10px;
+	position:absolute;
+	top:16px;
+	right:0;
+	z-index: 99999;
+}
+#debugLog pre {
+	font-size:11px;
+	white-space: pre-wrap;       /* Since CSS 2.1 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+.admin-edit-overlay {
+	position:absolute;
+	margin-top:-10px;
+	left:45%;
+	z-index:999;
+	font-size:20px;
+	padding: 10px 20px;
+}

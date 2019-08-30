@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+
+<install>
+	<param name="name" value="gallery"/>
+	<param name="version" value="1.4.0"/>
+	<param name="date" value="04.06.2018"/>
+	<param name="title" value="Pictures Gallery"/>
+	<param name="description" value="Photos and Pictures management. Supports albums, integration with the blog."/>
+	<param name="tags" value="gallery,photography,photo album"/>
+	<param name="author" value="max@msvhost.com"/>
+	<param name="preview" value="images/gallery/module_preview.jpg"/>
+
+	<param name="installHook" value="Install_Gallery"/>
+	
+	<dependency module="msv-core" version="1.0"/>
+	<dependency module="fancybox" version="1.0"/>
+	
+	<file dir="module" path="gallery/gallery.php"/>
+	<file dir="module" path="gallery/gallery.api.php"/>
+	<file dir="module" path="gallery/gallery.install.php"/>
+	<file dir="module" path="gallery/config.xml"/>
+	<file dir="module" path="gallery/config.locales.xml"/>
+	<file dir="module" path="gallery/config.install.xml"/>
+	<file dir="module" path="gallery/doc/en-gallery-1.html"/>
+	<file dir="template" path="default/main-gallery.tpl"/>
+	<file dir="template" path="default/gallery/main.tpl"/>
+	<file dir="template" path="default/gallery/list.tpl"/>
+	<file dir="template" path="default/gallery/details.tpl"/>
+	<file dir="template" path="default/gallery/album-list.tpl"/>
+	<file dir="template" path="default/gallery/album-preview.tpl"/>
+	<file dir="template" path="default/widget/gallery-album.tpl"/>
+	<file dir="content" path="images/gallery/gallery1_photo1.jpg"/>
+	<file dir="content" path="images/gallery/gallery1_photo2.jpg"/>
+	<file dir="content" path="images/gallery/gallery1_photo3.jpg"/>
+	<file dir="content" path="images/gallery/gallery1_photo4.jpg"/>
+	<file dir="content" path="images/gallery/gallery1_photo5.jpg"/>
+	<file dir="content" path="images/gallery/gallery1_photo6.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_1.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_2.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_3.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_4.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_5.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_6.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_7.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_8.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_9.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_10.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_11.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_12.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_13.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_14.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_15.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_16.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_17.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_18.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_19.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_20.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_21.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_22.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_23.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_24.jpg"/>
+	<file dir="content" path="images/gallery/gallery2_photo_login.jpg"/>
+	<file dir="content" path="images/gallery/gallery_1.jpg"/>
+	<file dir="content" path="images/gallery/module_preview.jpg"/>
+</install>
+
+</document>

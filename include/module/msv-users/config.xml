@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+
+<config>
+	<param name="activationLevel" value="2"/>
+	<param name="activationUrl" value="*"/>
+	<param name="adminMenu" value="0"/>
+	
+	<constant name="TABLE_USERS" value="users"/>
+	
+	<filter action="loadUserSession" url="*"/>
+	
+	<table name="users" index="email" title="email">
+		<field name="id" type="id"/>
+		<field name="published" type="published"/>
+		<field name="deleted" type="deleted"/>
+		<field name="author" type="author"/>
+		<field name="updated" type="updated"/>
+		<field name="lang" type="lang"/>
+		<field name="email" type="str"/>
+		<field name="email_verified" type="bool"/>
+		<field name="password" type="str"/>
+		<field name="name" type="str"/>
+		<field name="phone" type="str"/>
+		<field name="pic" type="pic"/>
+		<field name="country" type="str"/>
+		<field name="city" type="str"/>
+		<field name="timezone" type="str"/>
+		<field name="website" type="str"/>
+		<field name="url" type="str"/>
+		<field name="company" type="str"/>
+		<field name="company_info" type="str"/>
+		<field name="lang_default" type="str"/>
+		<field name="access" type="str" select-from="list:everyone,user,admin,dev"/>
+		<field name="iss" type="str"/>
+		<field name="reset_token" type="str"/>
+		<field name="verify_token" type="str"/>
+		<field name="access_token" type="str"/>
+	</table>
+	
+	<form name="user-login" function="loadUserFormLogin">
+		<field name="email" type="email" required="true"/>
+		<field name="password" type="password" required="true"/>
+	</form>
+	
+	<form name="user-password-reset" function="loadUserFormPasswordReset">
+		<field name="email" type="email" required="true"/>
+	</form>
+	
+	<form name="user-password-update" function="loadUserFormPasswordUpdate">
+		<field name="reset_token" type="str" required="true"/>
+		<field name="password" type="password" required="true"/>
+	</form>
+	
+	
+</config>
+</document>

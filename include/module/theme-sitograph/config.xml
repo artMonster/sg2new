@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+
+<config>
+	<param name="activationLevel" value="1"/>
+	<param name="activationUrl" value="*"/>
+	<param name="adminMenu" value="0"/>
+</config>
+
+</document>

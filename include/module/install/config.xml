@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+
+<config>
+	<param name="activationUrl" value="*"/>
+	<param name="activationLevel" value="1"/>
+	<param name="adminMenu" value="0"/>
+</config>
+
+
+<install>
+	<param name="name" value="install" />
+	<param name="version" value="1.2.7"/>
+	<param name="date" value="04.07.2018"/>
+	<param name="title" value="Sitograph Install"/>
+	<param name="description" value="Sitograph Installer"/>
+	
+	<file dir="module" path="install/install.php"/>
+	<file dir="module" path="install/config.xml"/>
+	<file dir="template" path="default/install.tpl"/>
+</install>
+
+</document>

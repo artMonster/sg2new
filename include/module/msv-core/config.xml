@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+
+	<config>
+		<param name="activationUrl" value="*"/>
+		<param name="adminMenu" value="0"/>
+
+		<param name="accessAPIStatus" value="admin"/>
+		<param name="accessAPIUpdateAll" value="dev"/>
+
+		<constant name="TABLE_STRUCTURE" value="structure"/>
+		<constant name="TABLE_DOCUMENTS" value="documents"/>
+		<constant name="TABLE_SETTINGS" value="settings"/>
+		<constant name="TABLE_MAIL_TEMPLATES" value="mail_templates"/>
+		<constant name="TABLE_MENU" value="menu"/>
+		<constant name="TABLE_CRONJOBS" value="cronjobs"/>
+		<constant name="TABLE_CRONJOBS_LOGS" value="cronjobs_logs"/>
+		<constant name="TABLE_MAIL_LOG" value="mail_log"/>
+
+		<api name="structure" action="api_request_structure"/>
+		<api name="document" action="api_request_document"/>
+		<api name="settings" action="api_request_settings"/>
+		<api name="uploadpic" action="api_upload_picture"/>
+		<api name="uploadfile" action="api_upload_file"/>
+		<api name="cron" action="api_request_cron"/>
+		<api name="core" action="api_request_core"/>
+		<api name="urlformat" action="api_format_url" disabled="1"/>
+
+		<table name="structure" index="id" title="name" useseo="1">
+			<field name="id" type="id" readonly="1"/>
+			<field name="published" type="published"/>
+			<field name="deleted" type="deleted"/>
+			<field name="author" type="author" readonly="1"/>
+			<field name="updated" type="updated" readonly="1"/>
+			<field name="lang" type="lang"/>
+			<field name="url" type="url"/>
+			<field name="parent_id" type="int" select-from="table:structure"/>
+			<field name="name" type="str"/>
+			<field name="template" type="str"/>
+			<field name="page_template" type="str"/>
+			<field name="page_document_id" type="int"/>
+			<field name="sitemap" type="bool"/>
+			<field name="debug" type="bool"/>
+			<field name="access" type="str" select-from="list:everyone,user,admin,dev"/>
+			<field name="access_users" type="array" selectlist="table:users"/>
+		</table>
+		<table name="documents" index="id" title="id">
+			<field name="id" type="id" readonly="1"/>
+			<field name="published" type="published"/>
+			<field name="deleted" type="deleted"/>
+			<field name="author" type="author" readonly="1"/>
+			<field name="updated" type="updated" readonly="1"/>
+			<field name="lang" type="lang"/>
+			<field name="name" type="text"/>
+			<field name="text" type="doc" listskip="1"/>
+			<field name="external_link" type="str" listskip="1"/>
+		</table>
+		<table name="settings" index="param" title="param">
+			<field name="id" type="id" readonly="1"/>
+			<field name="published" type="published"/>
+			<field name="deleted" type="deleted"/>
+			<field name="author" type="author" readonly="1"/>
+			<field name="updated" type="updated" readonly="1"/>
+			<field name="lang" type="lang" listskip="1"/>
+			<field name="description" type="str"/>
+			<field name="param" type="str"/>
+			<field name="value" type="text"/>
+			<field name="group" type="str" select-from="list:system,theme,website,user" listskip="1"/>
+		</table>
+		<table name="mail_templates" index="id" title="name">
+			<field name="id" type="id" readonly="1"/>
+			<field name="published" type="published"/>
+			<field name="deleted" type="deleted"/>
+			<field name="author" type="author" readonly="1"/>
+			<field name="updated" type="updated" readonly="1"/>
+			<field name="lang" type="lang" listskip="1"/>
+			<field name="name" type="str"/>
+			<field name="subject" type="str"/>
+			<field name="text" type="text"/>
+			<field name="header" type="text" listskip="1"/>
+		</table>
+		<table name="menu" index="id" title="name">
+			<field name="id" type="id" readonly="1"/>
+			<field name="published" type="published"/>
+			<field name="deleted" type="deleted"/>
+			<field name="author" type="author" readonly="1"/>
+			<field name="updated" type="updated" readonly="1"/>
+			<field name="lang" type="lang" listskip="1"/>
+			<field name="menu_id" type="str"/>
+			<field name="structure_id" type="int" select-from="table:structure" listskip="1"/>
+			<field name="name" type="str"/>
+			<field name="url" type="url"/>
+			<field name="order_id" type="int"/>
+			<field name="parent_id" type="int" select-from="table:menu"/>
+		</table>
+		<table name="cronjobs" index="id" title="name">
+			<field name="id" type="id" readonly="1"/>
+			<field name="published" type="published"/>
+			<field name="deleted" type="deleted"/>
+			<field name="author" type="author" readonly="1"/>
+			<field name="updated" type="updated" readonly="1"/>
+			<field name="lang" type="lang" listskip="1"/>
+			<field name="name" type="str"/>
+			<field name="status" type="str"/>
+			<field name="type" type="str"/>
+			<field name="url_local" type="str" listskip="1"/>
+			<field name="code" type="text" listskip="1"/>
+			<field name="last_run" type="date" readonly="1"/>
+			<field name="last_result" type="bool" readonly="1"/>
+		</table>
+		<table name="cronjobs_logs" index="id" title="id">
+			<field name="id" type="id" readonly="1"/>
+			<field name="published" type="published"/>
+			<field name="deleted" type="deleted"/>
+			<field name="author" type="author" readonly="1"/>
+			<field name="updated" type="updated" readonly="1"/>
+			<field name="lang" type="lang" listskip="1"/>
+			<field name="job_id" type="int" select-from="table:cronjobs" listskip="1"/>
+			<field name="job_name" type="str"/>
+			<field name="time_start" type="datetime"/>
+			<field name="time_end" type="datetime"/>
+			<field name="result_ok" type="bool" readonly="1"/>
+			<field name="result_msg" type="text" readonly="1"/>
+		</table>
+		<table name="mail_log" index="id" title="id">
+			<field name="id" type="id" readonly="1"/>
+			<field name="published" type="published"/>
+			<field name="deleted" type="deleted"/>
+			<field name="author" type="author" readonly="1"/>
+			<field name="updated" type="updated" readonly="1"/>
+			<field name="lang" type="lang" listskip="1"/>
+			<field name="user_id" type="int" select-from="table:users" listskip="1"/>
+			<field name="date" type="datetime"/>
+			<field name="to" type="str"/>
+			<field name="subject" type="str"/>
+			<field name="body" type="doc" listskip="1"/>
+			<field name="header" type="text" listskip="1"/>
+			<field name="result" type="text" readonly="1"/>
+		</table>
+	</config>
+</document>
