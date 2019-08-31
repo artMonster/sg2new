@@ -51,15 +51,18 @@
 		<field name="views" type="int" listskip="1"/>
 		<field name="shares" type="int" listskip="1"/>
 		<field name="comments" type="int" listskip="1"/>
+
+		<field name="article_categories_id" type="str" select-from="table:article_categories" />
+		
 	</table>
-	<table name="article_categories" index="url,article_id" title="title">
+	<table name="article_categories" index="url" title="title">
 		<field name="id" type="id" readonly="1"/>
 		<field name="published" type="published"/>
 		<field name="deleted" type="deleted"/>
 		<field name="author" type="author"/>
 		<field name="updated" type="updated"/>
 		<field name="lang" type="lang"/>
-		<field name="article_id" type="int" select-from="table:articles"/>
+		
 		<field name="title" type="str"/>
 		<field name="url" type="url"/>
 	</table>

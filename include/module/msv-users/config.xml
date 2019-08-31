@@ -36,6 +36,7 @@
 		<field name="reset_token" type="str"/>
 		<field name="verify_token" type="str"/>
 		<field name="access_token" type="str"/>
+		<field name="access_categories_id" type="str" select-from="table:article_categories" />
 	</table>
 	
 	<form name="user-login" function="loadUserFormLogin">

@@ -226,6 +226,7 @@ function api_blog_add($row, $options = array()) {
     if (empty($row["text"])) $row["text"] = "";
     if (empty($row["pic"])) $row["pic"] = "";
     if (empty($row["pic_preview"])) $row["pic_preview"] = "";
+    if (empty($row["article_categories_id"])) $row["article_categories_id"] = 0;
 
     if (in_array("LoadPictures", $options)) {
         // try to load files

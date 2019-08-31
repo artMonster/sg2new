@@ -1,0 +1,28 @@
+<?php 
+define("LANGUAGES", "ru");
+define("DB_HOST", "localhost");
+define("DB_LOGIN", "root");
+define("DB_PASSWORD", "");
+define("DB_NAME", "sg2");
+define("ABS", "I:\OpenServer\OSPanel\domains\sg2");
+define("DB_REQUIRED", true);
+define("DATE_FORMAT", "d.m.Y H:i:s");
+define("PROTOCOL", "http://");
+define("MASTERHOST", "");
+define("UPLOAD_FILES_PATH", "I:\OpenServer\OSPanel\domains\sg2/content");
+define("CONTENT_URL", "/content");
+define("PHP_HIDE_ERRORS", true);
+define("DEBUG", false);
+define("DEBUG_LOG", "");
+define("SITE_CLOSED", false);
+define("SHOW_ADMIN_MENU", 1);
+define("PHP_LOCALE", "en_US.UTF-8");
+define("PHP_TIMEZONE", "Europe/Berlin");
+define("DATABASE_ENCODING", "utf8");
+define("JS_BEFORE_BODY", false);
+define("SUBDOMAIN_LANGUAGES", false);
+define("REP", "http://rep.msvhost.com/api/rep/main/");
+define("USER_HASH_PASSWORD", true);
+define("USER_IGNORE_PRIVILEGES", false);
+define("SMARTY_DIR", "I:\OpenServer\OSPanel\domains\sg2/include/custom/smarty/");
+define("ADMIN_URL", "/admin/");

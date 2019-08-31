@@ -35,6 +35,7 @@ function Install_Blog($module) {
         "text" => msv_load_module_doc($module->pathModule, "blog-folder-structure"),
         "pic" => "images/blog/blog_1.jpg",
         "pic_preview" => "images/blog/blog_1.jpg",
+        "article_categories_id" => 0,
     );
     $result = api_blog_add($item, array("LoadPictures"));
 
@@ -50,6 +51,7 @@ function Install_Blog($module) {
         "text" => msv_load_module_doc($module->pathModule, "blog-gallery"),
         "pic" => "images/blog/blog_2.jpg",
         "pic_preview" => "images/blog/blog_2.jpg",
+        "article_categories_id" => 0,
     );
     $result = api_blog_add($item, array("LoadPictures"));
 
@@ -64,6 +66,7 @@ function Install_Blog($module) {
         "text" => msv_load_module_doc($module->pathModule, "blog-layers"),
         "pic" => "images/blog/blog_3.jpg",
         "pic_preview" => "images/blog/blog_3.jpg",
+        "article_categories_id" => 0,
     );
     $result = api_blog_add($item, array("LoadPictures"));
 

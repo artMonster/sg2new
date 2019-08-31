@@ -87,6 +87,7 @@
 		<field name="table.articles.seo_title" value="Title страницы"/>
 		<field name="table.articles.seo_description" value="Описание страницы"/>
 		<field name="table.articles.seo_keywords" value="Ключевые слова"/>
+		<field name="table.articles.article_categories_id" value="Рубрики и теги"/>
 		<field name="table.article_categories" value="Рубрики и теги"/>
 		<field name="table.article_categories.id" value="ID"/>
 		<field name="table.article_categories.published" value="Активно"/>
